@@ -1,0 +1,16 @@
+---
+
+- name: add yum repositories by url
+  yum_repository:
+    name: "{{ item.name }}"
+    description: "{{ item.description }}"
+    baseurl: "{{ item.url }}"
+    gpgkey: "{{ item.gpgkey }}"
+  loop: "{{ yum_repository_urls }}"
+  tags: yum-repositories
+
+- name: add yum repositories by package
+  yum:
+    name: "{{ item }}"
+  loop: "{{ yum_repository_pkgs }}"
+  tags: yum-repositories
