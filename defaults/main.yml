@@ -1,4 +1,4 @@
 ---
 
-yum_repository_urls: []
-yum_repository_pkgs: []
+yum_repositories_urls: []
+yum_repositories_pkgs: []
