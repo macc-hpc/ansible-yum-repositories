@@ -6,6 +6,7 @@
     description: "{{ item.description }}"
     baseurl: "{{ item.url }}"
     gpgkey: "{{ item.gpgkey }}"
+    mode: 0644
   loop: "{{ yum_repositories_urls }}"
   tags: yum-repositories
 
